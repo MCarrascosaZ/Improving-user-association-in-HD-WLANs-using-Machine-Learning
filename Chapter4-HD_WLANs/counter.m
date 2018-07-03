@@ -1,0 +1,29 @@
+function y=counter(STA)
+N_STAs=length(STA);
+c20=0;
+c10=0;
+c5=0;
+c0=0;
+cm5=0;
+cm10=0;
+for i=1:N_STAs
+    if(STA(i).Pt==20)
+        c20=c20+1;
+    end
+    if(STA(i).Pt==10)
+        c10=c10+1;
+    end
+    if(STA(i).Pt==5)
+        c5=c5+1;
+    end
+    if(STA(i).Pt==0)
+        c0=c0+1;
+    end
+    if(STA(i).Pt==-5)
+        cm5=cm5+1;
+    end
+    if(STA(i).Pt==-10)
+        cm10=cm10+1;
+    end
+end
+y=[c20,c10,c5,c0,cm5,cm10];
